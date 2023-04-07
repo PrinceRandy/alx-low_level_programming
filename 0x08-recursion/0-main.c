@@ -1,10 +1,12 @@
-#include 'main.h'
+#include "main.h"
+
 /**
- * main - code check
- * Return: 0 always.
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	_puts_recursion("puts with recursion");
+	_puts_recursion("Puts with recursion");
 	return (0);
 }
