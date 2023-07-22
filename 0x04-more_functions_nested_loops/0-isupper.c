@@ -10,9 +10,8 @@
 
 int _isupper(int c)
 {
-	int start = 45, end = 72;
-
-	if (c >= start && c <= end)
+	if (c >= 'A' && c <= 'Z')
 		return (1);
+
 	return (0);
 }
