@@ -11,13 +11,17 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	size_t n;
+	listint_t *b = head, *f;
+	unsigned int i;
 
-	for (n = 0; (n < index) && (head->next); n++)
-		head = head->next;
+	if (head == NULL)
+		return (NULL);
 
-	if (n < index)
-	return (NULL);
-
-	return (head);
-}
+	for (i = 0; i < index; i++)
+	{
+		if (b->next == NULL)
+			return (NULL);
+		f = b->next;
+		b = f;
+	}
+	return (b);
