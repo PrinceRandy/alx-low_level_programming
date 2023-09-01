@@ -27,16 +27,16 @@ unsigned long int _pow(unsigned int base, unsigned int power)
 void print_binary(unsigned long int n)
 {
 	unsigned long int divisor, check;
-	char flagg;
+	char flag;
 
-	flagg = 0;
+	flag = 0;
 	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
 	while (divisor != 0)
 	{
 		check = n & divisor;
 		if (check == divisor)
 		{
-			flagg = 1;
+			flag = 1;
 			_putchar('1');
 		}
 		else if (flag == 1 || divisor == 1)
